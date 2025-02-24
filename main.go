@@ -17,7 +17,9 @@ import (
 	_ "github.com/tursodatabase/libsql-client-go/libsql"
 )
 
-type apiConfig struct{DB *database.Queries}
+type apiConfig struct {
+	DB *database.Queries
+}
 
 //go:embed static/*
 var staticFiles embed.FS
@@ -94,4 +96,3 @@ func main() {
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
 }
-
