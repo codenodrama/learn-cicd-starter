@@ -22,10 +22,10 @@ jobs:
         run: go version
 
       - name: Install gosec
-      run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
       - name: Check gosec
-      run: gosec ./...
+        run: gosec ./...
 
   style:
     name: Style
